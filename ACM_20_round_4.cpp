@@ -1,4 +1,8 @@
-//ACM PTIT
+/**
+*	author:  dosven
+*	created: 21.09.2000 21:10
+*/
+
 
 #include <iostream>
 #include <string>
@@ -56,7 +60,6 @@ const int MAX = 100;
 
 int main() {
 	int n, l; //n là số lượng thanh gỗ và l là chiều dài mỗi thanh 
-	
 	int arr[MAX];
 	
 	cout << "So luong thanh go: " << endl;
@@ -70,9 +73,82 @@ int main() {
 		for (int k = 0; k < n; ++k) {
 			if (arr[k] >= j) dem ++;
 		}
-		if (dem == j) {
-			cout << "Gia tri lon nhat canh mai nha: " << endl;
-			return 0;
+
+		if (dem >= j) {
+			cout << "Gia tri lon nhat canh mai nha: " << j << endl;
+			break;
 		}
 	}
+}
+
+// P204PROH - Xây Tháp (chưa làm được)
+// https://www.spoj.com/PTIT/problems/P204PROH/
+
+
+/* <<<<<<<<< P204PROA - abc coins >>>>>>>>>>
+Bạn muốn mua coca và hiện trong túi có n đồng. 
+Bạn có thể mua 1 coca lon với giá a đồng hoặc mua coca thủy tinh với giá b đồng 
+và khi trả lại chai thủy tinh rỗng được hoàn c đồng. 
+Hãy tính số lượng chai lớn nhất bạn có thể mua.
+--------------------------------------
+Input
+1 dòng duy nhất là 4 số n, a, b, c (1 <= n, a, b, c <= 1e18, c < b)
+
+Output
+Một số duy nhất là kết quả của bài toán.
+--------------------------------------
+Sample:
+10 11 9 8
+.......
+2
+
+10 5 6 1
+.......
+2
+*/
+
+
+
+int main() {
+	int n, a, b, c, dem1, dem2 ;
+	cout << "Nhap du lieu: " ;	
+	cin >> n >> a >> b;
+// n: tien | a: gia lon | b: gia chai | c: gia hoan tra
+	dem1 = n / a;
+	dem2 = n / b;
+	for (int i = 1; i < count; i += b){
+		for (int j = 0; j  count; j += b) {
+			if ( a*i + b*j >= n) {
+				/* code */
+			}
+		}
+	}
+}
+
+// P204PROF - Chọn số
+// Tìm số đẹp lớn nhất 
+
+const int MAX = 100; 
+
+int main() {
+	int n;
+	int arr[MAX];
+	cout << "Nhap vao so nguyen dương n: " << endl;
+	
+// Tìm các ước của số nguyên dương n
+	for (int i = 0; i < n; ++i) {
+		if (n % i == 0 ){
+			cin >> arr[];
+		}
+	}
+	for (int i = n; i > 1; --i){
+	 	for (int j = 2; j < n; ++j){
+	 		if ( i % (j^2) == 0 ) {
+	 			break;
+	 		}else {
+
+	 		}
+	 	}
+	}
+	return 0;
 }
