@@ -312,7 +312,7 @@ public class bai13 {
 	public static void main(String[] args) {
 		int[] a = {23, 43, 21, 69 ,3, 11, 94};
 		int min = a[0];
-		for (int i = 1; i < 5 ; ++i ) {
+		for (int i = 1; i < 7 ; ++i ) {
 			if (min > a[i]) {
 				min = a[i];
 			}
@@ -328,8 +328,88 @@ public class bai13 {
 
 /* 
 * Task14:
-* Cho day so tu nhien in ra man hinh gia tri va chi so cua so nho nhat trong day do 
+* Cho day so tu nhien in ra man hinh gia tri nho nhat khong tring cac so con lai
 */
 
+public class bai14 {
+	public static void main(String[] args) {
+		int[] a = {8, 12, 8, 8, 9};
+		int N = 5;
+		int min = a[0];
+// Sap xep mang theo tang dan
+ 		for (int i = 0 ; i < N - 1 ;++i ) {
+ 			for (int j = i + 1; j < N; ++j ) {
+ 				if (a[i]>a[j]) {
+ 					int temp = a[i];	
+ 					a[i] = a[j];
+ 					a[j] = temp;
+ 				} 				
+ 			}
+ 		}
 
+ 		for (int k = 4; k > 0 ; k-- ) {
+ 			if (a[0] == a[k]) {
+ 				min = a[k+1];
+ 				break; 
+ 			}
+ 		}
+ 		System.out.println("Gia tri nho nhat trong day: " + min);
+	}
+}
 
+/* 
+* Task15:
+* Cho mot day so nguyen bat ki, hay xoa di trong day nay cac so hang = 0 va 
+in ra man hinh cac so con lai trong day 
+*/
+
+public class bai15{
+	public static void main(String[] args) {
+		int N = 8, i = 0, j = 0, dem = 0;
+		int[] a = {8,0,0,0,0,0,12,3};
+		int[] b = new int[N];
+		while(i < N) {
+			if (a[i] ==-0) {
+				i==;
+			} else {
+				b[j] = a[i];
+				i++;
+				j++;
+				dem++;
+			}
+		}
+		for (j = 0; j < dem ;++j  ) {
+			System.out.println(b[j] + " ");
+		}
+	}
+}
+
+/* 
+* Task16:
+* Cho mot day so nguyen bat ki, cho so c, dem xem trong day co bao nhieu
+* so > c, <c, = c;
+*/
+
+public class bai16 {
+	public static void main(String[] args) {
+		int[] a = {7, 54, 23, 41, 23, 65, 69, 11, 67, 50, 23, 57};
+		int N = 12;
+		int c = 23;
+		int count = 0;
+		int count_be = 0;
+		int count_lon = 0; 
+		for (int i = 0; i < N ; ++i ) {
+			if (a[i] == c) {
+				count ++;
+			} else if (a[i] < c) {
+				count_be ++;
+			} else {
+				count_lon ++;
+			}
+		} 
+		System.out.println("So lan xuat hien so c: " + count);
+		System.out.println("So lan xuat hien so nho hon c: " + count_be);
+		System.out.println("So lan xuat hien so lon hon c: " + count_lon);
+
+	}
+}
